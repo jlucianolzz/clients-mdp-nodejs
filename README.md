@@ -4,8 +4,8 @@ In this project, we will be using Node.js as the backend and ExpressJs.
 
 ## Install
 
-    $ git clone https://github.com/jlucianolzz/serverless-swapi
-    $ cd serverless-swapi
+    $ git clone https://github.com/jlucianolzz/clients-mdp-nodejs
+    $ cd clients-mdp-nodejs
     $ npm install
 
 ## Running Scripts DB
