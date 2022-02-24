@@ -1,0 +1,58 @@
+{
+  "openapi": "3.0.0",
+  "servers": [{ "url": "http://localhost:8000", "description": "", "variables": {} }],
+  "info": {
+    "version": "16d0360d-6064-4b8b-8c94-2741c12f14d7",
+    "title": "DESA_NODE_CLIENTES_SQL_SP",
+    "description": "",
+    "termsOfService": "",
+    "contact": {},
+    "license": { "name": "" }
+  },
+  "paths": {
+    "/api/clientes": {
+      "get": {
+        "summary": "Listar Clientes",
+        "operationId": "ListarClientes",
+        "parameters": [{ "$ref": "#/components/parameters/pagina" }, { "$ref": "#/components/parameters/cantidad" }],
+        "responses": { "200": { "description": "", "headers": {} } },
+        "tags": ["Clientes"]
+      },
+      "post": {
+        "summary": "Registrar Cliente",
+        "operationId": "RegistrarCliente",
+        "parameters": [],
+        "responses": { "200": { "description": "", "headers": {} } },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "text/plain": {
+              "schema": { "type": "string", "example": { "vNombre": "Ariana", "vApellido": "Luciano", "dFecNacimiento": "2010-12-22" } },
+              "example": "{\r\n    \"vNombre\":\"Ariana\",\r\n    \"vApellido\":\"Luciano\",\r\n    \"dFecNacimiento\":\"2010-12-22\"\r\n}"
+            }
+          }
+        },
+        "tags": ["Clientes"]
+      }
+    },
+    "/api/clientes/promedioEdad": {
+      "get": {
+        "summary": "Obtener Promedio Edades",
+        "operationId": "ObtenerPromedioEdades",
+        "parameters": [],
+        "responses": { "200": { "description": "", "headers": {} } },
+        "tags": ["Clientes"]
+      }
+    }
+  },
+  "components": {
+    "parameters": {
+      "pagina": { "name": "pagina", "in": "query", "required": true, "style": "form", "schema": { "type": "number" } },
+      "cantidad": { "name": "cantidad", "in": "query", "required": true, "style": "form", "schema": { "type": "number" } }
+    }
+  },
+  "security": [],
+  "tags": [],
+  "externalDocs": { "url": "", "description": "" },
+  "warnings": []
+}
